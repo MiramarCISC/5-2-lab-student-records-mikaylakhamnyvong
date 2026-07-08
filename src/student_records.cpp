@@ -12,7 +12,8 @@ bool isValidStudentId(string id) {
 }
 
 bool isValidScore(double score) {
-    // TODO: Return true when score is between 0 and 100, inclusive.
+    // Return true when score is between 0 and 100, inclusive.
+    if(score >= 0 && score <= 100) return true;
     return false;
 }
 
