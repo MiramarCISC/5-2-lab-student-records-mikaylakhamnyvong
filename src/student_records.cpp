@@ -37,10 +37,12 @@ void printStudents(const Student students[], int size) {
 }
 
 double calculateAverageScore(const Student students[], int size) {
-    // TODO:
     // If the array is null or size is invalid, return 0.0.
     // Otherwise, return the average score.
-    return 0.0;
+    if(students == nullptr || size <= 0) return 0.0;
+    int sum = 0;
+    for(int i = 0; i < size; i++) sum += students->score;
+    return sum / (double) size;
 }
 
 double findHighestScore(const Student students[], int size) {
