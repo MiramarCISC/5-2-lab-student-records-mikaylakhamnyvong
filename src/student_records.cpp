@@ -41,7 +41,7 @@ double calculateAverageScore(const Student students[], int size) {
     // Otherwise, return the average score.
     if(students == nullptr || size <= 0) return 0.0;
     int sum = 0;
-    for(int i = 0; i < size; i++) sum += students->score;
+    for(int i = 0; i < size; i++) sum += students[i].score;
     return sum / (double) size;
 }
 
