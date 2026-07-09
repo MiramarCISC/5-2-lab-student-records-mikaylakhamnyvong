@@ -61,10 +61,14 @@ double findHighestScore(const Student students[], int size) {
 }
 
 int findStudentById(const Student students[], int size, string targetId) {
-    // TODO:
     // Search by comparing students[i].id to targetId.
     // Return the index of the matching student.
     // Return -1 if no student is found.
+    for(int i = 0; i < size; i++) {
+        if(students[i].id == targetId) {
+            return i;
+        }
+    }
     return -1;
 }
 
