@@ -44,7 +44,7 @@ double calculateAverageScore(const Student students[], int size) {
     for(int i = 0; i < size; i++) {
         sum += students[i].score;
     }
-    return sum / (double) size;
+    return sum / size;
 }
 
 double findHighestScore(const Student students[], int size) {
