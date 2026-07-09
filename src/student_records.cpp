@@ -4,10 +4,10 @@
 using namespace std;
 
 bool isValidStudentId(string id) {
-    // TODO:
     // A valid ID should have at least 3 characters.
     // A valid ID should start with an uppercase letter.
     // Hint: You may compare characters directly, such as id[0] >= 'A'.
+    if(id.length() >= 3 && id[0] >= 'A') return true;
     return false;
 }
 
