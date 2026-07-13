@@ -39,8 +39,10 @@ void printStudents(const Student students[], int size) {
 double calculateAverageScore(const Student students[], int size) {
     // If the array is null or size is invalid, return 0.0.
     // Otherwise, return the average score.
+   
     if(students == nullptr || size <= 0) return 0.0;
     double sum = 0;
+    
     for(int i = 0; i < size; i++) {
         sum += students[i].score;
     }
@@ -50,9 +52,12 @@ double calculateAverageScore(const Student students[], int size) {
 double findHighestScore(const Student students[], int size) {
     // If the array is null or size is invalid, return 0.0.
     // Otherwise, return the highest score.
-    if(students == nullptr || size <= 0) return 0.0;
+    
+    if(students == nullptr || size <= 0) return 0.0; //Aidan: Could space everything out a bit more
+   
     double max = students[0].score;
     for(int i = 1; i < size; i++) {
+        
         if(students[i].score > max) {
             max = students[i].score;
         }
@@ -65,6 +70,7 @@ int findStudentById(const Student students[], int size, string targetId) {
     // Return the index of the matching student.
     // Return -1 if no student is found.
     for(int i = 0; i < size; i++) {
+        
         if(students[i].id == targetId) {
             return i;
         }
@@ -78,9 +84,12 @@ char determineLetterGrade(double score) {
     // Return 'C' for scores 70 or higher.
     // Return 'D' for scores 60 or higher.
     // Return 'F' otherwise.
-    if(score >= 90) return 'A';
+    if(score >= 90) return 'A'; //Aidan: could also do the same here
+
     if(score >= 80) return 'B';
+
     if(score >= 70) return 'C';
+
     if(score >= 60) return 'D';
     return 'F';
 }
